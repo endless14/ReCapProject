@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMomery;
 using System;
 
@@ -8,7 +9,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            ProductManager productManager = new ProductManager(new InMomeryProductDal());
+            CarManager productManager = new CarManager(new EfCarDal());
             foreach (var prodcut in productManager.GetAll()) 
             {
                 Console.WriteLine(prodcut.DailyPrice);

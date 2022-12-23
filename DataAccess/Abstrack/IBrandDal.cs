@@ -3,10 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Business.Abstrack
+namespace DataAccess.Abstrack
 {
-    public interface IProductService
+    public interface IBrandDal:IEntityRepository<Brand>
     {
-        List<Products> GetAll();
     }
 }
